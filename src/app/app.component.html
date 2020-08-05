@@ -6,6 +6,7 @@
     <div class="col-10">
       <app-header></app-header>
       <news-list-item [newsItem]="news" [newsIndex]="newsIndex" *ngFor="let news of foundNews | async ; let newsIndex = index"></news-list-item>
+      <app-footer></app-footer>
     </div>
     <div class="col-1"></div>
   </div>
