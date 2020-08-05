@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ContentService} from "./services/content.service";
+import {StoryItemInterface} from "./models/story-item.interface";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-root',
@@ -8,20 +10,13 @@ import {ContentService} from "./services/content.service";
 })
 export class AppComponent implements OnInit {
   title = 'frontend';
-
+  foundNews : Observable<StoryItemInterface[]> ;
   constructor(public contentService : ContentService) {
 
   }
 
   ngOnInit(): void {
-    this.contentService.getLatestNews(0).subscribe(
-      results => {
-        console.log("RESULTS : ",results);
-      },
-      error => {
-        console.log("error : ",error);
-      }
-    )
+    this.foundNews = this.contentService.getLatestNews(0);
   }
 
 }

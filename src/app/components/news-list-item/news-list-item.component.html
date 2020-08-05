@@ -1,0 +1,4 @@
+<div class="card card-body p-0 border-0">
+  <a href="{{newsItem.url}}" class="m-0 text-dark text-decoration-none"><small class="text-muted">{{newsIndex}} . </small>{{newsItem.title}} <small *ngIf="newsItem.url" class="d-inline text-muted">({{linkToUrlConverter(newsItem.url)}})</small></a>
+  <small class="text-muted">{{newsItem.score}} points by {{newsItem.by}} {{newsItem.time | dateAgo}} <small class="text-muted" *ngIf="newsItem.kids">{{newsItem.kids.length}} comments</small></small>
+</div>
