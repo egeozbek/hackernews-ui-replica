@@ -1,27 +1,25 @@
-# Frontend
+# HackerNews UI Replica
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.2.
+Replica of [HackerNews](https://news.ycombinator.com/) website using Angular 8 and Bootstrap 4 for the frontend part of a full-stack interview assignment.
 
-## Development server
+### Keywords
+```
+Angular 8, Bootstrap 4, Frontend, Typescript , ForkJoin, Interview Assignment
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Usage
+```
+git clone https://github.com/egeozbek/hackernews-ui-replica
+npm install
+ng serve
+```
 
-## Code scaffolding
+##HackerNews API
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+[API Provided by HackerNews](https://github.com/HackerNews/API) allows users to get ids of the most recent news. To speed up the loading times, (and to prevent sequential calls to the API for each entry) we use forkJoin method to paralellize the network requests.
+You can investigate [ContentService](https://github.com/egeozbek/hackernews-ui-replica/tree/master/src/app/services/) for more detail.
 
-## Build
+##Date Ago Pipe
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Inspired by [AndrewPoyntz](https://github.com/AndrewPoyntz/time-ago-pipe), date ago pipe transforms the difference in post time in Unix-time to human readable text.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
