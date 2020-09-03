@@ -14,12 +14,12 @@ npm install
 ng serve
 ```
 
-##HackerNews API
+## HackerNews API
 
 [API Provided by HackerNews](https://github.com/HackerNews/API) allows users to get ids of the most recent news. To speed up the loading times, (and to prevent sequential calls to the API for each entry) we use forkJoin method to paralellize the network requests.
 You can investigate [ContentService](https://github.com/egeozbek/hackernews-ui-replica/tree/master/src/app/services/) for more detail.
 
-##Date Ago Pipe
+## Date Ago Pipe
 
 Inspired by [AndrewPoyntz](https://github.com/AndrewPoyntz/time-ago-pipe), date ago pipe transforms the difference in post time in Unix-time to human readable text.
 
